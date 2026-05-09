@@ -68,7 +68,7 @@ function App() {
 
     axios
       .get(
-        `http://127.0.0.1:8000/city-prediction?city=${city}`
+        `https://epivision-ai-backend.onrender.com/predict`
       )
       .then((res) => {
 
@@ -95,7 +95,7 @@ function App() {
 
     axios
       .get(
-        `http://127.0.0.1:8000/predict?rainfall=${rainfall}&humidity=${humidity}&fever_cases=${feverCases}&medicine_sales=${medicineSales}`
+        `https://epivision-ai-backend.onrender.com/predict?rainfall=${rainfall}&humidity=${humidity}&fever_cases=${feverCases}&medicine_sales=${medicineSales}`
       )
 
       .then((res) => {
@@ -108,15 +108,6 @@ function App() {
     feverCases,
     medicineSales,
   ]);
-
-
-  [
-    rainfall,
-    humidity,
-    feverCases,
-    medicineSales,
-    city,
-  ];
 
   return (
     <div className="min-h-screen bg-slate-950 p-6">
